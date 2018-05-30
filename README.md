@@ -2,8 +2,32 @@
 
 ## design goal
 
+### file control
 ```js
-import { nodeDoctor, rubyDoctor } from doctor
+cosnt { doctor, prompt } = require('@sepalang/doctor')
+
+doctor(require("path").resolve(__dirname, "../"),async ({ file })=>{
+  const configFile = await file.parseJSON("./config/config.json").catch(
+    ()=>file.write("./config/config.json",{})
+  );
+  
+  configFile.write(query=>{
+    !query.getProperty('token') && prompt(`set query`,({ input })=>{
+      if(!input) return
+      query.setProperty('token',input)
+    });
+  });
+})
+.catch((e)=>{
+  console.log(`exit`)
+  process.exit(1)
+})
+```
+
+### language control
+```js
+import { nodeDoctor, rubyDoctor } from '@sepalang/doctor'
+
 (await ()=>{
   nodeDoctor
   .version("lts/*")

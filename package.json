@@ -2,9 +2,10 @@
   "name": "@sepalang/doctor",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "padoc --pack src/index.js dist/index.js",
+    "test": "padoc --test test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/sepalang/doctor/issues"
   },
-  "homepage": "https://github.com/sepalang/doctor#readme"
+  "homepage": "https://github.com/sepalang/doctor#readme",
+  "devDependencies": {
+    "@sepalang/padoc": "^0.7.18",
+    "pado": "github:sepalang/pado"
+  }
 }

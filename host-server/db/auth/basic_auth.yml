@@ -1,3 +1,2 @@
-Host:
-  User: host
-  Password: host
+HOST_USER: host
+HOST_PASS: host

@@ -1,4 +1,5 @@
 class ConferencesController < ApplicationController
+  http_basic_authenticate_with name: ENV['HOST_USER'], password: ENV['HOST_PASS'] if ENV['HOST_USER']
   before_action :set_conference, only: [:show, :edit, :update, :destroy]
 
   # GET /conferences

@@ -58,4 +58,9 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  
+  if Rails.root.join('db/auth','basic_auth.yml').exist?
+    ENV.update YAML.load_file("#{Rails.root}/db/auth/basic_auth.yml");
+  end
 end

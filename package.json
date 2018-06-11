@@ -6,7 +6,9 @@
   "scripts": {
     "build:src": "padoc --pack src/index.js dist/index.js",
     "build:sample": "padoc --pack sample/sample.js dist/sample.js",
-    "build":"npm run build:src & npm run build:sample",
+    "build": "npm run build:src & npm run build:sample",
+    "host:init": "runner ./host-server/ bundle install && runner ./host-server/ rails db:create && runner ./host-server/ rails db:migrate",
+    "host:start": "runner ./host-server/ rails s",
     "test": "padoc --test test"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/sepalang/doctor#readme",
   "devDependencies": {
     "@sepalang/padoc": "^0.7.18",
-    "pado": "github:sepalang/pado"
+    "pado": "github:sepalang/pado",
+    "@sepalang/runner": "^0.7.1"
   }
 }

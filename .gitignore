@@ -2,3 +2,6 @@
 /.cache
 node_modules
 /dist/sample.js
+
+#host
+host-server/db/auth/basic_auth.yml

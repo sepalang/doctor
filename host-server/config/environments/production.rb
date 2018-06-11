@@ -92,6 +92,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
+  config.active_storage.service = :local
+  
   if Rails.root.join('db/auth','basic_auth.yml').exist?
     config.basic_auth_store = YAML.load_file("#{Rails.root}/db/auth/basic_auth.yml");
   end

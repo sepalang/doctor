@@ -59,6 +59,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
+  config.active_storage.service = :local
   
   if Rails.root.join('db/auth','basic_auth.yml').exist?
     ENV.update YAML.load_file("#{Rails.root}/db/auth/basic_auth.yml");

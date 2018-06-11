@@ -12,6 +12,8 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+rails active_storage:install
+rails db:migrate
 
 * Database initialization
 

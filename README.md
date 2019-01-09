@@ -1,5 +1,7 @@
 # Doctor
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sepalang/doctor.svg)](https://greenkeeper.io/)
+
 ## design goal
 
 ### file control

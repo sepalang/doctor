@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/sepalang/doctor#readme",
   "devDependencies": {
-    "@sepalang/padoc": "^0.7.18",
+    "@sepalang/padoc": "^0.10.0",
     "pado": "github:sepalang/pado",
-    "@sepalang/runner": "^0.7.1"
+    "@sepalang/runner": "^0.9.0"
   }
 }
